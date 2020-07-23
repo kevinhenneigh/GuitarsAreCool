@@ -21,6 +21,11 @@ namespace GuitarsAreCool.Controllers
             Guitar guitar = new Guitar();
             guitar.Brand = form["guitar"];
             guitar.Style = form["style"];
+
+            //Add to DataBase
+
+            ViewData["Added"] = true;
+
             return View();
         }
 
