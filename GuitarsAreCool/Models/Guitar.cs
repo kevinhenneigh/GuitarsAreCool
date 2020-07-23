@@ -14,7 +14,7 @@ namespace GuitarsAreCool
         /// Unique identifier for each individual guitar
         /// Serial Number
         /// </summary>
-        public char SerialId { get; set; }
+        public int GuitarId { get; set; }
 
         /// <summary>
         /// The make of the guitar
@@ -28,11 +28,7 @@ namespace GuitarsAreCool
         /// </summary>
         public string Style { get; set; }
 
-        /// <summary>
-        /// The guitar type 
-        /// Example: Acoustic Six-String
-        /// </summary>
-        public string Type { get; set; }
+
 
     }
 }
