@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Server.IIS.Core;
 
 namespace GuitarsAreCool.Controllers
 {
@@ -29,5 +30,21 @@ namespace GuitarsAreCool.Controllers
             return View();
         }
 
+        [HttpGet]
+        public IActionResult AddWithBinding()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult AddWithBinding(Guitar guitar)
+        {
+            if (ModelState.IsValid)
+            {
+                ViewData["Message"] = $"{guitar.Brand} {guitar.Style} was added!"; 
+                // Add to Db HERE!!
+            }
+            return View();
+        }
     }
 }
