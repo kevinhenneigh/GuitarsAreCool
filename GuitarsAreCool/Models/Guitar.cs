@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -16,6 +17,7 @@ namespace GuitarsAreCool
         /// </summary>
         public int GuitarId { get; set; }
 
+        [Required(ErrorMessage = "Who made your guitar?")]
         /// <summary>
         /// The make of the guitar
         /// Example: Gibson

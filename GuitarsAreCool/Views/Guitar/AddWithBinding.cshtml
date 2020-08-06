@@ -1,0 +1,36 @@
+﻿@model Guitar;
+@{
+    ViewData["Title"] = "AddWithBinding";
+}
+
+<h1>Add with ModelBinding</h1>
+
+@if (ViewData["Message"] == null)
+{
+    <form method="post">
+        <label asp-for="Brand"></label>
+        <input asp-for="Brand" class="form-control" />
+        <span asp-validation-for="Brand"></span>
+        <br />
+
+        <label asp-for="Style"></label>
+        <input asp-for="Style" class="form-control" />
+        <span asp-validation-for="Style"></span>
+        <br />
+
+        <input type="submit" value="Add Guitar" />
+    </form>
+}
+else
+{
+    <h2>@ViewData["Message"]</h2>
+}
+
+@section Scripts
+{
+   <partial name="_ValidationScriptsPartial" />
+}
+
+
+
+
